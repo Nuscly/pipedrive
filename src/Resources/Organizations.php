@@ -22,4 +22,15 @@ class Organizations extends Entity
 
         return $this->request->get(':id/persons', $options);
     }
+
+    /**
+     * Get the mail messages for a deal.
+     *
+     * @param $id The deal id
+     * @return mixed
+     */
+    public function mailMessages($id)
+    {
+        return $this->request->get(':id/mailMessages', compact('id'));
+    }
 }
